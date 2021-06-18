@@ -1,0 +1,44 @@
+﻿﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Informatics-2021-MyLab-Cinema</title>
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+    <h1>Informatics-2021-MyLab-Cinema</h1>
+    <h3>Add Actor</h3>
+    <form action="javascript:void(0);" method="POST" onsubmit="addActor()">
+        <input type="text" id="Add-Name" placeholder="New Actor">
+        <input type="text" id="Add-Info" placeholder="New Info Actor">
+        <input type="submit" value="Add">
+    </form>
+
+    <div id="editActor">
+        <h3>Edit</h3>
+        <form action="javascript:void(0);" onsubmit="updateActor()">
+            <input type="hidden" id="Edit-Id">
+            <input type="text" id="Edit-Name">
+            <input type="text" id="Edit-Info">
+            <input type="submit" value="Save">
+            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+        </form>
+    </div>
+
+    <p id="counter"></p>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Info</th>
+        </tr>
+        <tbody id="actors"></tbody>
+    </table>
+
+    <script src="js/lab2.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        getActors();
+    </script>
+</body>
+</html>
